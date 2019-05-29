@@ -2,10 +2,12 @@
 
 - Python 2.7 script to static binary
 
-This docker creates a static version of python 2.7.16.
-It uses cython to compile the python script into c code.
-It compiles the c code and links it with the static pythoin binarys.
-The output is a static / portable/ standalone binary.
+# Description
+
+- This docker creates a static version of python 2.7.16.
+- It uses cython to compile the python script into c code.
+- It compiles the c code and links it with the static pythoin binarys.
+- The output is a static / portable/ standalone binary.
 
 ## Environment variables
 
@@ -14,7 +16,7 @@ The output is a static / portable/ standalone binary.
 
 ## Use
 
-You must mount a volume to the "/build". This is where you drop yout source .py file.
+You must mount a volume to the "/build". This is where you drop your source .py file.
 
 ```bash
 docker run -it \
