@@ -4,13 +4,13 @@
 # There is an issue with initing the modules.
 # make it 1 script if you can.
 
-cython --embed /build/$PY_SCRIPT -o /build/$PY_SCRIPT.c
+cython --embed /build/$PY_SCRIPT -o /build/$PY_SCRIPT.c 2>&1 | tee cython.output
 
-gcc \
-     /build/$PY_SCRIPT.c \
-    -I/python/include/python2.7 \
-    -L/python/lib \
-    $(/python/bin/python2.7  /python/bin/python2.7-config --libs) \
+
+gcc /build/$PY_SCRIPT.c \
+    -I /python/include/python2.7 \
+    -L /python/lib \
+    $(/python/bin/python2.7 /python/bin/python2.7-config --libs) \
     -pg \
     -fno-strict-aliasing \
     -g \
@@ -24,4 +24,4 @@ gcc \
     -Wl,-no-export-dynamic -static -static-libgcc \
     -static -fPIC \
     -o /build/$PY_SCRIPT_OUTPUT \
-    -v
+    -v | tee gcc.output

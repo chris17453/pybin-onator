@@ -5,7 +5,7 @@ FROM centos:7
 
 VOLUME /build
 
-RUN yum install make gcc gcc-c++ yum-utils glibc-static wget python2-Cython tar -y
+RUN yum install make gcc gcc-c++ yum-utils glibc-static wget Cython tar -y
 RUN yum-builddep python -y
 RUN wget https://www.python.org/ftp/python/2.7.16/Python-2.7.16.tgz 
 RUN tar -xzvf Python-2.7.16.tgz  
@@ -14,9 +14,8 @@ WORKDIR /Python-2.7.16
 
 COPY Python-2.7.16/Setup Modules/Setup
 RUN mkdir bin
-
+#                    --enable-profiling \
 RUN ./configure     --disable-shared \
-                    --enable-profiling \
                     --enable-optimizations\
                     --prefix="/python" \
                     LDFLAGS="-Wl,-no-export-dynamic -static -static-libgcc" \
@@ -27,4 +26,6 @@ RUN ./configure     --disable-shared \
 RUN make
 RUN make altinstall
 COPY pybin /
+
+# who knew you couldnt use single quotes in ENTRYPOINT... wth?
 ENTRYPOINT ["/pybin"]

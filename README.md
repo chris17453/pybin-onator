@@ -26,6 +26,15 @@ docker run -it \
            pybin-onator
 ```
 
+## Output
+
+- In the mounted directory you will have 4 new files.
+- File #1 -> my_script.py.c
+- File #2 -> my_bin
+- FILE #3 -> cython.output. my_script.py to my_script.py.c
+- FILE #4 -> gcc.output. The binary compiler action
+
+
 ### Notes
 
 - these modules need help with deps that are not static, they failed
