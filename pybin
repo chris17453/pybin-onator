@@ -4,7 +4,7 @@
 # There is an issue with initing the modules.
 # make it 1 script if you can.
 
-cython --embed /build/$PY_SCRIPT -o /build/$PY_SCRIPT.c 2>&1 | tee cython.output
+cython --embed /build/$PY_SCRIPT -o /build/$PY_SCRIPT.c 2>&1 | tee /build/cython.output
 
 
 gcc /build/$PY_SCRIPT.c \
@@ -24,4 +24,4 @@ gcc /build/$PY_SCRIPT.c \
     -Wl,-no-export-dynamic -static -static-libgcc \
     -static -fPIC \
     -o /build/$PY_SCRIPT_OUTPUT \
-    -v | tee gcc.output
+    -v | tee /build/gcc.output

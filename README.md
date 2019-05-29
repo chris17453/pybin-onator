@@ -26,6 +26,20 @@ docker run -it \
            pybin-onator
 ```
 
+## Building the image from scratch
+
+```bash
+git clone https://github.com/chris17453/pybin-onator.git
+cd pybin-onator
+make build
+```
+
+## Testing
+
+```bash
+make test
+```
+
 ## Output
 
 - In the mounted directory you will have 4 new files.
