@@ -24,4 +24,4 @@ gcc /build/$PY_SCRIPT.c \
     -Wl,-no-export-dynamic -static -static-libgcc \
     -static -fPIC \
     -o /build/$PY_SCRIPT_OUTPUT \
-    -v | tee /build/gcc.output
+    -v 2>&1 | tee /build/gcc.output

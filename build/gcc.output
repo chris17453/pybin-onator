@@ -1,0 +1,47 @@
+Using built-in specs.
+COLLECT_GCC=gcc
+COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-redhat-linux/4.8.5/lto-wrapper
+Target: x86_64-redhat-linux
+Configured with: ../configure --prefix=/usr --mandir=/usr/share/man --infodir=/usr/share/info --with-bugurl=http://bugzilla.redhat.com/bugzilla --enable-bootstrap --enable-shared --enable-threads=posix --enable-checking=release --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-linker-hash-style=gnu --enable-languages=c,c++,objc,obj-c++,java,fortran,ada,go,lto --enable-plugin --enable-initfini-array --disable-libgcj --with-isl=/builddir/build/BUILD/gcc-4.8.5-20150702/obj-x86_64-redhat-linux/isl-install --with-cloog=/builddir/build/BUILD/gcc-4.8.5-20150702/obj-x86_64-redhat-linux/cloog-install --enable-gnu-indirect-function --with-tune=generic --with-arch_32=x86-64 --build=x86_64-redhat-linux
+Thread model: posix
+gcc version 4.8.5 20150623 (Red Hat 4.8.5-36) (GCC) 
+COLLECT_GCC_OPTIONS='-I' '/python/include/python2.7' '-L/python/lib' '-pg' '-fno-strict-aliasing' '-g' '-O2' '-D' 'NDEBUG' '-g' '-fwrapv' '-O3' '-Wall' '-Wstrict-prototypes' '-static' '-static-libgcc' '-static' '-fPIC' '-o' '/build/calvin.ascii' '-v' '-mtune=generic' '-march=x86-64'
+ /usr/libexec/gcc/x86_64-redhat-linux/4.8.5/cc1 -quiet -v -I /python/include/python2.7 -D NDEBUG /build/test.py.c -quiet -dumpbase test.py.c -mtune=generic -march=x86-64 -auxbase test.py -g -g -O2 -O3 -Wall -Wstrict-prototypes -version -p -fno-strict-aliasing -fwrapv -fPIC -o /tmp/cc1nhQtg.s
+GNU C (GCC) version 4.8.5 20150623 (Red Hat 4.8.5-36) (x86_64-redhat-linux)
+	compiled by GNU C version 4.8.5 20150623 (Red Hat 4.8.5-36), GMP version 6.0.0, MPFR version 3.1.1, MPC version 1.0.1
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+ignoring nonexistent directory "/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include-fixed"
+ignoring nonexistent directory "/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../x86_64-redhat-linux/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /python/include/python2.7
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include
+ /usr/local/include
+ /usr/include
+End of search list.
+GNU C (GCC) version 4.8.5 20150623 (Red Hat 4.8.5-36) (x86_64-redhat-linux)
+	compiled by GNU C version 4.8.5 20150623 (Red Hat 4.8.5-36), GMP version 6.0.0, MPFR version 3.1.1, MPC version 1.0.1
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+Compiler executable checksum: c0b461ba69dba093bfc939a7fa8b7724
+COLLECT_GCC_OPTIONS='-I' '/python/include/python2.7' '-L/python/lib' '-pg' '-fno-strict-aliasing' '-g' '-O2' '-D' 'NDEBUG' '-g' '-fwrapv' '-O3' '-Wall' '-Wstrict-prototypes' '-static' '-static-libgcc' '-static' '-fPIC' '-o' '/build/calvin.ascii' '-v' '-mtune=generic' '-march=x86-64'
+ as -v -I /python/include/python2.7 --64 -o /tmp/ccYAfTf0.o /tmp/cc1nhQtg.s
+GNU assembler version 2.27 (x86_64-redhat-linux) using BFD version version 2.27-34.base.el7
+COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/4.8.5/:/usr/libexec/gcc/x86_64-redhat-linux/4.8.5/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/4.8.5/:/usr/lib/gcc/x86_64-redhat-linux/
+LIBRARY_PATH=/usr/lib/gcc/x86_64-redhat-linux/4.8.5/:/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-I' '/python/include/python2.7' '-L/python/lib' '-pg' '-fno-strict-aliasing' '-g' '-O2' '-D' 'NDEBUG' '-g' '-fwrapv' '-O3' '-Wall' '-Wstrict-prototypes' '-static' '-static-libgcc' '-static' '-fPIC' '-o' '/build/calvin.ascii' '-v' '-mtune=generic' '-march=x86-64'
+ /usr/libexec/gcc/x86_64-redhat-linux/4.8.5/collect2 --build-id --no-add-needed --hash-style=gnu -m elf_x86_64 -static -o /build/calvin.ascii /usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/gcrt1.o /usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/4.8.5/crtbeginT.o -L/python/lib -L/usr/lib/gcc/x86_64-redhat-linux/4.8.5 -L/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../.. /tmp/ccYAfTf0.o -lpython2.7 -lpthread -ldl -lutil -lm -no-export-dynamic --start-group -lgcc -lgcc_eh -lc --end-group /usr/lib/gcc/x86_64-redhat-linux/4.8.5/crtend.o /usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/crtn.o
+/python/lib/libpython2.7.a(posixmodule.o): In function `posix_tmpnam':
+/Python-2.7.16/./Modules/posixmodule.c:7648: warning: the use of `tmpnam_r' is dangerous, better use `mkstemp'
+/python/lib/libpython2.7.a(posixmodule.o): In function `ins':
+/Python-2.7.16/./Modules/posixmodule.c:9189: warning: the use of `tempnam' is dangerous, better use `mkstemp'
+/python/lib/libpython2.7.a(posixmodule.o): In function `posix_initgroups':
+posixmodule.c:(.text.unlikely+0x1f57): warning: Using 'initgroups' in statically linked applications requires at runtime the shared libraries from the glibc version used for linking
+/python/lib/libpython2.7.a(pwdmodule.o): In function `pwd_getpwall':
+/Python-2.7.16/./Modules/pwdmodule.c:165: warning: Using 'getpwent' in statically linked applications requires at runtime the shared libraries from the glibc version used for linking
+/python/lib/libpython2.7.a(pwdmodule.o): In function `pwd_getpwnam':
+pwdmodule.c:(.text.unlikely+0x1af): warning: Using 'getpwnam' in statically linked applications requires at runtime the shared libraries from the glibc version used for linking
+/python/lib/libpython2.7.a(pwdmodule.o): In function `pwd_getpwuid':
+pwdmodule.c:(.text.unlikely+0x240): warning: Using 'getpwuid' in statically linked applications requires at runtime the shared libraries from the glibc version used for linking
+/python/lib/libpython2.7.a(pwdmodule.o): In function `pwd_getpwall':
+pwdmodule.c:(.text.unlikely+0x118): warning: Using 'setpwent' in statically linked applications requires at runtime the shared libraries from the glibc version used for linking
+pwdmodule.c:(.text.unlikely+0x165): warning: Using 'endpwent' in statically linked applications requires at runtime the shared libraries from the glibc version used for linking

@@ -2,7 +2,21 @@
 
 - Python 2.7 script to static binary
 
-# Description
+### Notes V1
+
+- to get a standalone python you need to link all the modules staticaly
+- thius requires a custom build, because its dynamic in nature.
+- after the static lib's are overcome you run into some weird legacy code...
+- glibc.. a needed component to python is tricky it loads other modules 
+- dynamically, and im not sure if the names are hard coded or not.
+- from what I understand, depending on the compiler there are 2 flavors of glibc, old/new
+- but you need a custom build for each os you want to drop it in.
+- so, a cent 5,6,7 build. but maybe diff vers of glibc too?
+- more testing to come. research says either way you should have 90% coverage per os
+- insanity...
+
+
+## Description
 
 - This docker creates a static version of python 2.7.16.
 - It uses cython to compile the python script into c code.
